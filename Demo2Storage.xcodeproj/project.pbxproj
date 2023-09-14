@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		AE0E88C62AB2F8D200EA7530 /* Demo2Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = AE0E88C52AB2F8D200EA7530 /* Demo2Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE0E88CF2AB2F90B00EA7530 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E88CE2AB2F90A00EA7530 /* ImageUploader.swift */; };
+		AE0E88D22AB2F97800EA7530 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AE0E88D12AB2F97800EA7530 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AE0E88C22AB2F8D200EA7530 /* Demo2Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Demo2Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0E88C52AB2F8D200EA7530 /* Demo2Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo2Storage.h; sourceTree = "<group>"; };
+		AE0E88CE2AB2F90A00EA7530 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +23,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0E88D22AB2F97800EA7530 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,9 +49,26 @@
 		AE0E88C42AB2F8D200EA7530 /* Demo2Storage */ = {
 			isa = PBXGroup;
 			children = (
+				AE0E88CD2AB2F8FD00EA7530 /* Protocol */,
+				AE0E88CC2AB2F8F900EA7530 /* Service */,
 				AE0E88C52AB2F8D200EA7530 /* Demo2Storage.h */,
 			);
 			path = Demo2Storage;
+			sourceTree = "<group>";
+		};
+		AE0E88CC2AB2F8F900EA7530 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AE0E88CE2AB2F90A00EA7530 /* ImageUploader.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AE0E88CD2AB2F8FD00EA7530 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +99,9 @@
 			dependencies = (
 			);
 			name = Demo2Storage;
+			packageProductDependencies = (
+				AE0E88D12AB2F97800EA7530 /* FirebaseStorage */,
+			);
 			productName = Demo2Storage;
 			productReference = AE0E88C22AB2F8D200EA7530 /* Demo2Storage.framework */;
 			productType = "com.apple.product-type.framework";
@@ -93,6 +117,7 @@
 				TargetAttributes = {
 					AE0E88C12AB2F8D200EA7530 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -105,6 +130,9 @@
 				Base,
 			);
 			mainGroup = AE0E88B82AB2F8D200EA7530;
+			packageReferences = (
+				AE0E88D02AB2F97800EA7530 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = AE0E88C32AB2F8D200EA7530 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0E88CF2AB2F90B00EA7530 /* ImageUploader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +287,7 @@
 		AE0E88CA2AB2F8D200EA7530 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -281,6 +311,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,6 +320,7 @@
 		AE0E88CB2AB2F8D200EA7530 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -339,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE0E88D02AB2F97800EA7530 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE0E88D12AB2F97800EA7530 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE0E88D02AB2F97800EA7530 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE0E88B92AB2F8D200EA7530 /* Project object */;
 }
