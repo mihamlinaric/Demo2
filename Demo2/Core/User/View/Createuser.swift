@@ -15,19 +15,25 @@ struct CreateUserView: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            TextField("username", text: $viewModel.username)
-            TextField("age", text: $viewModel.age)
+            Group {
+                TextField("username", text: $viewModel.username)
+                TextField("age", text: $viewModel.age)
+            }
+            .padding(.horizontal, 36)
+            .padding(.vertical)
             
             Button {
                 Task { try await viewModel.createUser() }
                 dismiss()
             } label: {
                 Image(systemName: "paperplane")
+                    .imageScale(.large)
+                    .foregroundColor(.black)
             }
         }
-        .onAppear {
-            imagePickerPresented.toggle()
-        }
+//        .onAppear {
+//            imagePickerPresented.toggle()
+//        }
         .photosPicker(isPresented: $imagePickerPresented, selection: $viewModel.selectedImage)
     }
 }

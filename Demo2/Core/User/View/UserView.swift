@@ -24,6 +24,7 @@ struct UserView: View {
                             
                             Text("\(user.age)")
                         }
+                        .padding([.horizontal, .bottom], 6)
                     }
                 }
             }

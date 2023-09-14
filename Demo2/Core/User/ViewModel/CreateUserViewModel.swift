@@ -11,8 +11,6 @@ import SwiftUI
 import PhotosUI
 
 final class CreateUserViewModel: ObservableObject {
-    let userService = Demo2Business.BusinessUserService.shared
-    
     @Published var username: String = ""
     @Published var age: String = ""
     
@@ -25,7 +23,7 @@ final class CreateUserViewModel: ObservableObject {
     
     func createUser() async throws {
         guard let age = Int(self.age) else { return }
-        try await userService.createUser(username: self.username, age: age, uiImage: self.uiImage)
+        try await UserService.createUser(username: self.username, age: age, uiImage: self.uiImage)
     }
     
     @MainActor

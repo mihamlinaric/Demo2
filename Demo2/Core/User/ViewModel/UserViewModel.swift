@@ -10,7 +10,6 @@ import Demo2Model
 import Demo2Business
 
 final class UserViewModel: ObservableObject {
-    let userService = Demo2Business.BusinessUserService.shared
     @Published var users: [User] = []
     
     init() {
@@ -19,6 +18,6 @@ final class UserViewModel: ObservableObject {
     
     @MainActor
     func fetchAllUsers() async throws {
-        self.users = try await userService.fetchAllUsers()
+        self.users = try await UserService.fetchAllUsers()
     }
 }

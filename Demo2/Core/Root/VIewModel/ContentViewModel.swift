@@ -10,11 +10,10 @@ import Demo2Business
 import Demo2Model
 
 final class ContentViewModel: ObservableObject {
-    let userService = Demo2Business.BusinessUserService.shared
     @Published var user: User?
     
     @MainActor
     func fetchUser() async throws {
-        self.user = try await userService.fetchUser(uid: "5qdWoLh6H9lLoELUkRk4")
+        self.user = try await UserService.fetchUser(uid: "5qdWoLh6H9lLoELUkRk4")
     }
 }
