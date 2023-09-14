@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		AE0E88832AB2E53E00EA7530 /* Demo2Model.h in Headers */ = {isa = PBXBuildFile; fileRef = AE0E88822AB2E53E00EA7530 /* Demo2Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE0E888C2AB2E55E00EA7530 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E888B2AB2E55E00EA7530 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AE0E887F2AB2E53E00EA7530 /* Demo2Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Demo2Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0E88822AB2E53E00EA7530 /* Demo2Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo2Model.h; sourceTree = "<group>"; };
+		AE0E888B2AB2E55E00EA7530 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			children = (
 				AE0E88812AB2E53E00EA7530 /* Demo2Model */,
 				AE0E88802AB2E53E00EA7530 /* Products */,
+				AE0E889C2AB2E73400EA7530 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,9 +48,33 @@
 		AE0E88812AB2E53E00EA7530 /* Demo2Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE0E88892AB2E55100EA7530 /* Model */,
 				AE0E88822AB2E53E00EA7530 /* Demo2Model.h */,
 			);
 			path = Demo2Model;
+			sourceTree = "<group>";
+		};
+		AE0E88892AB2E55100EA7530 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE0E888A2AB2E55700EA7530 /* User */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE0E888A2AB2E55700EA7530 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				AE0E888B2AB2E55E00EA7530 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		AE0E889C2AB2E73400EA7530 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +105,8 @@
 			dependencies = (
 			);
 			name = Demo2Model;
+			packageProductDependencies = (
+			);
 			productName = Demo2Model;
 			productReference = AE0E887F2AB2E53E00EA7530 /* Demo2Model.framework */;
 			productType = "com.apple.product-type.framework";
@@ -93,6 +122,7 @@
 				TargetAttributes = {
 					AE0E887E2AB2E53E00EA7530 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -105,6 +135,9 @@
 				Base,
 			);
 			mainGroup = AE0E88752AB2E53E00EA7530;
+			packageReferences = (
+				AE0E888D2AB2E5A600EA7530 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = AE0E88802AB2E53E00EA7530 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0E888C2AB2E55E00EA7530 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +292,7 @@
 		AE0E88872AB2E53E00EA7530 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -281,6 +316,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,6 +325,7 @@
 		AE0E88882AB2E53E00EA7530 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -339,6 +376,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE0E888D2AB2E5A600EA7530 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = AE0E88762AB2E53E00EA7530 /* Project object */;
 }
