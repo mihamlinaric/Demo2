@@ -10,12 +10,29 @@
 		AE0E88C62AB2F8D200EA7530 /* Demo2Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = AE0E88C52AB2F8D200EA7530 /* Demo2Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE0E88CF2AB2F90B00EA7530 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E88CE2AB2F90A00EA7530 /* ImageUploader.swift */; };
 		AE0E88D22AB2F97800EA7530 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AE0E88D12AB2F97800EA7530 /* FirebaseStorage */; };
+		AE0E89002AB30FE200EA7530 /* Demo2Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88FF2AB30FE200EA7530 /* Demo2Utility.framework */; };
+		AE0E89012AB30FE200EA7530 /* Demo2Utility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88FF2AB30FE200EA7530 /* Demo2Utility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AE0E89022AB30FE200EA7530 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AE0E89012AB30FE200EA7530 /* Demo2Utility.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AE0E88C22AB2F8D200EA7530 /* Demo2Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Demo2Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0E88C52AB2F8D200EA7530 /* Demo2Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo2Storage.h; sourceTree = "<group>"; };
 		AE0E88CE2AB2F90A00EA7530 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		AE0E88FF2AB30FE200EA7530 /* Demo2Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +41,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE0E88D22AB2F97800EA7530 /* FirebaseStorage in Frameworks */,
+				AE0E89002AB30FE200EA7530 /* Demo2Utility.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +53,7 @@
 			children = (
 				AE0E88C42AB2F8D200EA7530 /* Demo2Storage */,
 				AE0E88C32AB2F8D200EA7530 /* Products */,
+				AE0E88FE2AB30FE200EA7530 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,7 +68,6 @@
 		AE0E88C42AB2F8D200EA7530 /* Demo2Storage */ = {
 			isa = PBXGroup;
 			children = (
-				AE0E88CD2AB2F8FD00EA7530 /* Protocol */,
 				AE0E88CC2AB2F8F900EA7530 /* Service */,
 				AE0E88C52AB2F8D200EA7530 /* Demo2Storage.h */,
 			);
@@ -64,11 +82,12 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		AE0E88CD2AB2F8FD00EA7530 /* Protocol */ = {
+		AE0E88FE2AB30FE200EA7530 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE0E88FF2AB30FE200EA7530 /* Demo2Utility.framework */,
 			);
-			path = Protocol;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +112,7 @@
 				AE0E88BE2AB2F8D200EA7530 /* Sources */,
 				AE0E88BF2AB2F8D200EA7530 /* Frameworks */,
 				AE0E88C02AB2F8D200EA7530 /* Resources */,
+				AE0E89022AB30FE200EA7530 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
