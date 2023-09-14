@@ -57,17 +57,9 @@
 		AE0E88892AB2E55100EA7530 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AE0E888A2AB2E55700EA7530 /* User */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		AE0E888A2AB2E55700EA7530 /* User */ = {
-			isa = PBXGroup;
-			children = (
 				AE0E888B2AB2E55E00EA7530 /* User.swift */,
 			);
-			path = User;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AE0E889C2AB2E73400EA7530 /* Frameworks */ = {

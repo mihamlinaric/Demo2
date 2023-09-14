@@ -13,6 +13,10 @@ public struct User: Codable, Identifiable, Hashable {
     public var age: Int
     public var imageUrl: String?
     
+    private enum CodingKeys: String, CodingKey {
+            case id, username, age, imageUrl
+    }
+    
     public init(id: String, username: String, age: Int, imageUrl: String? = nil) {
         self.id = id
         self.username = username
