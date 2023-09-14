@@ -9,14 +9,17 @@
 /* Begin PBXBuildFile section */
 		AE0E88972AB2E61C00EA7530 /* Demo2Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88962AB2E61C00EA7530 /* Demo2Model.framework */; };
 		AE0E88982AB2E61D00EA7530 /* Demo2Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88962AB2E61C00EA7530 /* Demo2Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AE0E88B72AB2F87100EA7530 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AE0E88B62AB2F87100EA7530 /* FirebaseAnalytics */; };
 		AE0E88DA2AB3012E00EA7530 /* Demo2Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88D92AB3012E00EA7530 /* Demo2Storage.framework */; };
 		AE0E88DB2AB3012F00EA7530 /* Demo2Storage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88D92AB3012E00EA7530 /* Demo2Storage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AE0E89042AB3101F00EA7530 /* Demo2Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E89032AB3101F00EA7530 /* Demo2Utility.framework */; };
+		AE0E89052AB3101F00EA7530 /* Demo2Utility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E89032AB3101F00EA7530 /* Demo2Utility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AE0E89092AB314D300EA7530 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AE0E89082AB314D300EA7530 /* FirebaseAnalytics */; settings = {ATTRIBUTES = (Required, ); }; };
+		AE0E89222AB330FF00EA7530 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E89212AB330FF00EA7530 /* FirebaseService.swift */; };
 		AE90E47D2AB1DEA9008B551A /* Demo2Business.h in Headers */ = {isa = PBXBuildFile; fileRef = AE90E47C2AB1DEA9008B551A /* Demo2Business.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE90E4AD2AB1DF5E008B551A /* BusinessUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90E4AC2AB1DF5E008B551A /* BusinessUserService.swift */; };
+		AE90E4AD2AB1DF5E008B551A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90E4AC2AB1DF5E008B551A /* UserService.swift */; };
 		AE90E4B42AB1DFDB008B551A /* Demo2Firestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE90E4B32AB1DFDB008B551A /* Demo2Firestore.framework */; };
 		AE90E4B52AB1DFDB008B551A /* Demo2Firestore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE90E4B32AB1DFDB008B551A /* Demo2Firestore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AE90E4D92AB1E6A3008B551A /* BusinessUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90E4D82AB1E6A3008B551A /* BusinessUserProtocol.swift */; };
+		AE90E4D92AB1E6A3008B551A /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90E4D82AB1E6A3008B551A /* UserProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +30,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				AE0E88982AB2E61D00EA7530 /* Demo2Model.framework in Embed Frameworks */,
+				AE0E89052AB3101F00EA7530 /* Demo2Utility.framework in Embed Frameworks */,
 				AE0E88DB2AB3012F00EA7530 /* Demo2Storage.framework in Embed Frameworks */,
 				AE90E4B52AB1DFDB008B551A /* Demo2Firestore.framework in Embed Frameworks */,
 			);
@@ -38,11 +42,14 @@
 /* Begin PBXFileReference section */
 		AE0E88962AB2E61C00EA7530 /* Demo2Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0E88D92AB3012E00EA7530 /* Demo2Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE0E88FB2AB30FA000EA7530 /* Demo2Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE0E89032AB3101F00EA7530 /* Demo2Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE0E89212AB330FF00EA7530 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		AE90E4792AB1DEA9008B551A /* Demo2Business.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Demo2Business.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE90E47C2AB1DEA9008B551A /* Demo2Business.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo2Business.h; sourceTree = "<group>"; };
-		AE90E4AC2AB1DF5E008B551A /* BusinessUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessUserService.swift; sourceTree = "<group>"; };
+		AE90E4AC2AB1DF5E008B551A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		AE90E4B32AB1DFDB008B551A /* Demo2Firestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Firestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE90E4D82AB1E6A3008B551A /* BusinessUserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessUserProtocol.swift; sourceTree = "<group>"; };
+		AE90E4D82AB1E6A3008B551A /* UserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +59,9 @@
 			files = (
 				AE90E4B42AB1DFDB008B551A /* Demo2Firestore.framework in Frameworks */,
 				AE0E88972AB2E61C00EA7530 /* Demo2Model.framework in Frameworks */,
+				AE0E89092AB314D300EA7530 /* FirebaseAnalytics in Frameworks */,
+				AE0E89042AB3101F00EA7530 /* Demo2Utility.framework in Frameworks */,
 				AE0E88DA2AB3012E00EA7530 /* Demo2Storage.framework in Frameworks */,
-				AE0E88B72AB2F87100EA7530 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +98,8 @@
 		AE90E4AA2AB1DF4C008B551A /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				AE90E4AC2AB1DF5E008B551A /* BusinessUserService.swift */,
+				AE90E4AC2AB1DF5E008B551A /* UserService.swift */,
+				AE0E89212AB330FF00EA7530 /* FirebaseService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -98,7 +107,7 @@
 		AE90E4AB2AB1DF55008B551A /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				AE90E4D82AB1E6A3008B551A /* BusinessUserProtocol.swift */,
+				AE90E4D82AB1E6A3008B551A /* UserProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -106,6 +115,8 @@
 		AE90E4B22AB1DFDB008B551A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE0E89032AB3101F00EA7530 /* Demo2Utility.framework */,
+				AE0E88FB2AB30FA000EA7530 /* Demo2Utility.framework */,
 				AE0E88D92AB3012E00EA7530 /* Demo2Storage.framework */,
 				AE0E88962AB2E61C00EA7530 /* Demo2Model.framework */,
 				AE90E4B32AB1DFDB008B551A /* Demo2Firestore.framework */,
@@ -143,7 +154,7 @@
 			);
 			name = Demo2Business;
 			packageProductDependencies = (
-				AE0E88B62AB2F87100EA7530 /* FirebaseAnalytics */,
+				AE0E89082AB314D300EA7530 /* FirebaseAnalytics */,
 			);
 			productName = Demo2Business;
 			productReference = AE90E4792AB1DEA9008B551A /* Demo2Business.framework */;
@@ -200,8 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE90E4D92AB1E6A3008B551A /* BusinessUserProtocol.swift in Sources */,
-				AE90E4AD2AB1DF5E008B551A /* BusinessUserService.swift in Sources */,
+				AE90E4D92AB1E6A3008B551A /* UserProtocol.swift in Sources */,
+				AE90E4AD2AB1DF5E008B551A /* UserService.swift in Sources */,
+				AE0E89222AB330FF00EA7530 /* FirebaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +438,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AE0E88B62AB2F87100EA7530 /* FirebaseAnalytics */ = {
+		AE0E89082AB314D300EA7530 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AE90E4D12AB1E5F6008B551A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
