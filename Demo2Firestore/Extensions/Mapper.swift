@@ -17,6 +17,6 @@ extension DocumentSnapshot {
 
 extension QuerySnapshot {
     func getData<T>(as type: T.Type) -> [T] where T: Decodable {
-        return self.documents.compactMap { try? $0.data(as: T.self)}
+        return self.documents.compactMap { try? $0.data(as: T.self) }
     }
 }
