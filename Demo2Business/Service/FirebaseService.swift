@@ -18,8 +18,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 public class FirebaseService {
+    public init() { }
     
-    public static func _config() {
+    public func config() {
         @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     }
 }

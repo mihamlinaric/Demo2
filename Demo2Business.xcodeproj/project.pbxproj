@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE00FAE62AB4365A00A56DD5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AE00FAE52AB4365A00A56DD5 /* FirebaseAnalytics */; };
+		AE00FAE82AB444C500A56DD5 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00FAE72AB444C500A56DD5 /* Interface.swift */; };
 		AE0E88972AB2E61C00EA7530 /* Demo2Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88962AB2E61C00EA7530 /* Demo2Model.framework */; };
 		AE0E88982AB2E61D00EA7530 /* Demo2Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88962AB2E61C00EA7530 /* Demo2Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE0E88DA2AB3012E00EA7530 /* Demo2Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88D92AB3012E00EA7530 /* Demo2Storage.framework */; };
@@ -40,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AE00FAE72AB444C500A56DD5 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
 		AE0E88962AB2E61C00EA7530 /* Demo2Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0E88D92AB3012E00EA7530 /* Demo2Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0E88FB2AB30FA000EA7530 /* Demo2Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 			children = (
 				AE90E4AC2AB1DF5E008B551A /* UserService.swift */,
 				AE0E89212AB330FF00EA7530 /* FirebaseService.swift */,
+				AE00FAE72AB444C500A56DD5 /* Interface.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				AE90E4D92AB1E6A3008B551A /* UserProtocol.swift in Sources */,
 				AE90E4AD2AB1DF5E008B551A /* UserService.swift in Sources */,
 				AE0E89222AB330FF00EA7530 /* FirebaseService.swift in Sources */,
+				AE00FAE82AB444C500A56DD5 /* Interface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
