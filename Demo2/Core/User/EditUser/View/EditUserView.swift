@@ -10,11 +10,10 @@ import Demo2Model
 
 struct EditUserView: View {
     @Environment(\.dismiss) var dismiss
-    @ObservedObject var usersViewModel: UsersViewModel
+    @EnvironmentObject var usersViewModel: UsersViewModel
     @StateObject var viewModel: EditUserViewModel
     
-    init(usersViewModel: UsersViewModel, user: User) {
-        self.usersViewModel = usersViewModel
+    init(user: User) {
         self._viewModel = StateObject(wrappedValue: EditUserViewModel(user: user))
     }
     
@@ -45,6 +44,6 @@ struct EditUserView: View {
 
 struct EditUserView_Previews: PreviewProvider {
     static var previews: some View {
-        EditUserView(usersViewModel: UsersViewModel(), user: User.MOCK_USERS[0])
+        EditUserView(user: User.MOCK_USERS[0])
     }
 }

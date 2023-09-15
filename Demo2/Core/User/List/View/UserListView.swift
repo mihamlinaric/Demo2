@@ -9,15 +9,16 @@ import SwiftUI
 import Demo2Model
 
 struct UserListView: View {
-    @StateObject var viewModel = UsersViewModel()
+    @StateObject var usersViewModel = UsersViewModel()
     @State private var isSheetShowing: Bool = false
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                ForEach(Array(viewModel.users.values)) { user in
+                ForEach(Array(usersViewModel.users.values)) { user in
                     NavigationLink(value: user) {
-                        UserListRow(viewModel: viewModel, user: user)
+                        UserListRow(user: user)
+                            .environmentObject(usersViewModel)
                     }
                 }
             }
@@ -38,7 +39,8 @@ struct UserListView: View {
             }
         }
         .sheet(isPresented: $isSheetShowing) {
-            CreateUserView(usersViewModel: viewModel)
+            CreateUserView()
+                .environmentObject(usersViewModel)
                 .presentationDetents([.large])
         }
     }

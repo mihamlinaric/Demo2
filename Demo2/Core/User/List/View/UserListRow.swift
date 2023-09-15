@@ -9,7 +9,7 @@ import SwiftUI
 import Demo2Model
 
 struct UserListRow: View {
-    @ObservedObject var viewModel: UsersViewModel
+    @EnvironmentObject var usersViewModel: UsersViewModel
     let user: User
     
     @State private var editUserIsShowing: Bool = false
@@ -32,7 +32,7 @@ struct UserListRow: View {
             
             // remove user
             Button {
-                Task { try await viewModel.removeUser(uid: user.id) }
+                Task { try await usersViewModel.removeUser(uid: user.id) }
             } label: {
                 Image(systemName: "trash")
                     .foregroundColor(.red)
@@ -43,13 +43,13 @@ struct UserListRow: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding([.horizontal, .bottom], 6)
         .sheet(isPresented: $editUserIsShowing) {
-            EditUserView(usersViewModel: viewModel, user: user)
+            EditUserView(user: user)
         }
     }
 }
 
 struct UserListRow_Previews: PreviewProvider {
     static var previews: some View {
-        UserListRow(viewModel: UsersViewModel(), user: User.MOCK_USERS[0])
+        UserListRow(user: User.MOCK_USERS[0])
     }
 }
