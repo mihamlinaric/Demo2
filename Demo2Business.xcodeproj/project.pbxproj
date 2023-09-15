@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE00FAE62AB4365A00A56DD5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AE00FAE52AB4365A00A56DD5 /* FirebaseAnalytics */; };
 		AE0E88972AB2E61C00EA7530 /* Demo2Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88962AB2E61C00EA7530 /* Demo2Model.framework */; };
 		AE0E88982AB2E61D00EA7530 /* Demo2Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88962AB2E61C00EA7530 /* Demo2Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE0E88DA2AB3012E00EA7530 /* Demo2Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88D92AB3012E00EA7530 /* Demo2Storage.framework */; };
 		AE0E88DB2AB3012F00EA7530 /* Demo2Storage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88D92AB3012E00EA7530 /* Demo2Storage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE0E89042AB3101F00EA7530 /* Demo2Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E89032AB3101F00EA7530 /* Demo2Utility.framework */; };
 		AE0E89052AB3101F00EA7530 /* Demo2Utility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E89032AB3101F00EA7530 /* Demo2Utility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AE0E89092AB314D300EA7530 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AE0E89082AB314D300EA7530 /* FirebaseAnalytics */; settings = {ATTRIBUTES = (Required, ); }; };
 		AE0E89222AB330FF00EA7530 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E89212AB330FF00EA7530 /* FirebaseService.swift */; };
 		AE90E47D2AB1DEA9008B551A /* Demo2Business.h in Headers */ = {isa = PBXBuildFile; fileRef = AE90E47C2AB1DEA9008B551A /* Demo2Business.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE90E4AD2AB1DF5E008B551A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90E4AC2AB1DF5E008B551A /* UserService.swift */; };
@@ -59,8 +59,8 @@
 			files = (
 				AE90E4B42AB1DFDB008B551A /* Demo2Firestore.framework in Frameworks */,
 				AE0E88972AB2E61C00EA7530 /* Demo2Model.framework in Frameworks */,
-				AE0E89092AB314D300EA7530 /* FirebaseAnalytics in Frameworks */,
 				AE0E89042AB3101F00EA7530 /* Demo2Utility.framework in Frameworks */,
+				AE00FAE62AB4365A00A56DD5 /* FirebaseAnalytics in Frameworks */,
 				AE0E88DA2AB3012E00EA7530 /* Demo2Storage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,7 +154,7 @@
 			);
 			name = Demo2Business;
 			packageProductDependencies = (
-				AE0E89082AB314D300EA7530 /* FirebaseAnalytics */,
+				AE00FAE52AB4365A00A56DD5 /* FirebaseAnalytics */,
 			);
 			productName = Demo2Business;
 			productReference = AE90E4792AB1DEA9008B551A /* Demo2Business.framework */;
@@ -438,7 +438,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AE0E89082AB314D300EA7530 /* FirebaseAnalytics */ = {
+		AE00FAE52AB4365A00A56DD5 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AE90E4D12AB1E5F6008B551A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
