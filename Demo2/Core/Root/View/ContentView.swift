@@ -11,10 +11,14 @@ struct ContentView: View {
     @StateObject var  viewModel = ContentViewModel()
     
     var body: some View {
-        VStack {
-            MainTabView()
+        Group {
+            if viewModel.currentUser == nil {
+//                LoginView()
+                Text("login man")
+            } else {
+                MainTabView()
+            }
         }
-        .padding()
     }
 }
 

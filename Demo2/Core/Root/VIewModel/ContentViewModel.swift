@@ -6,14 +6,25 @@
 //
 
 import Foundation
+import Combine
 import Demo2Business
 import Demo2Model
 
 final class ContentViewModel: ObservableObject {
-    @Published var user: User?
+    
+    private var cancellables = Set<AnyCancellable>()
+    @Published var currentUser: Demo2Model.User?
     
     @MainActor
-    func fetchUser() async throws {
-        self.user = try await UserService.fetchUser(uid: "5qdWoLh6H9lLoELUkRk4")
+    init() {
+        setupSubscribers()
+    }
+    
+    @MainActor
+    func setupSubscribers() {
+        Interface.auth().$currentUser.sink { [weak self] currentUser in
+            self?.currentUser = currentUser
+        }
+        .store(in: &cancellables)
     }
 }
