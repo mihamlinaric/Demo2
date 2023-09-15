@@ -8,11 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		AE00FB0D2AB4783000A56DD5 /* Demo2Authentication.h in Headers */ = {isa = PBXBuildFile; fileRef = AE00FB0C2AB4783000A56DD5 /* Demo2Authentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE00FB162AB4787200A56DD5 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE00FB152AB4787200A56DD5 /* AuthenticationService.swift */; };
+		AE00FB192AB481F400A56DD5 /* Demo2Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE00FB182AB481F400A56DD5 /* Demo2Model.framework */; };
+		AE00FB1A2AB481F400A56DD5 /* Demo2Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE00FB182AB481F400A56DD5 /* Demo2Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AE00FB1E2AB4825300A56DD5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AE00FB1D2AB4825300A56DD5 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AE00FB1B2AB481F400A56DD5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AE00FB1A2AB481F400A56DD5 /* Demo2Model.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AE00FB092AB4783000A56DD5 /* Demo2Authentication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Demo2Authentication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE00FB0C2AB4783000A56DD5 /* Demo2Authentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo2Authentication.h; sourceTree = "<group>"; };
+		AE00FB152AB4787200A56DD5 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		AE00FB182AB481F400A56DD5 /* Demo2Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE00FB192AB481F400A56DD5 /* Demo2Model.framework in Frameworks */,
+				AE00FB1E2AB4825300A56DD5 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,6 +53,7 @@
 			children = (
 				AE00FB0B2AB4783000A56DD5 /* Demo2Authentication */,
 				AE00FB0A2AB4783000A56DD5 /* Products */,
+				AE00FB172AB481F400A56DD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,9 +68,34 @@
 		AE00FB0B2AB4783000A56DD5 /* Demo2Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				AE00FB142AB4785E00A56DD5 /* Protocol */,
+				AE00FB132AB4785700A56DD5 /* Service */,
 				AE00FB0C2AB4783000A56DD5 /* Demo2Authentication.h */,
 			);
 			path = Demo2Authentication;
+			sourceTree = "<group>";
+		};
+		AE00FB132AB4785700A56DD5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AE00FB152AB4787200A56DD5 /* AuthenticationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AE00FB142AB4785E00A56DD5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		AE00FB172AB481F400A56DD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE00FB182AB481F400A56DD5 /* Demo2Model.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,12 +120,16 @@
 				AE00FB052AB4783000A56DD5 /* Sources */,
 				AE00FB062AB4783000A56DD5 /* Frameworks */,
 				AE00FB072AB4783000A56DD5 /* Resources */,
+				AE00FB1B2AB481F400A56DD5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Demo2Authentication;
+			packageProductDependencies = (
+				AE00FB1D2AB4825300A56DD5 /* FirebaseAuth */,
+			);
 			productName = Demo2Authentication;
 			productReference = AE00FB092AB4783000A56DD5 /* Demo2Authentication.framework */;
 			productType = "com.apple.product-type.framework";
@@ -93,6 +145,7 @@
 				TargetAttributes = {
 					AE00FB082AB4783000A56DD5 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -105,6 +158,9 @@
 				Base,
 			);
 			mainGroup = AE00FAFF2AB4783000A56DD5;
+			packageReferences = (
+				AE00FB1C2AB4825300A56DD5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = AE00FB0A2AB4783000A56DD5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE00FB162AB4787200A56DD5 /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +315,7 @@
 		AE00FB112AB4783000A56DD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -281,6 +339,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,6 +348,7 @@
 		AE00FB122AB4783000A56DD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -339,6 +399,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE00FB1C2AB4825300A56DD5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE00FB1D2AB4825300A56DD5 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE00FB1C2AB4825300A56DD5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE00FB002AB4783000A56DD5 /* Project object */;
 }
