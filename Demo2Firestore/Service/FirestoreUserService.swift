@@ -18,12 +18,10 @@ public struct FirestoreUserService: FirestoreUserProtocols {
         let snapshot = try await FirestoreConstants.usersCollection.document(uid).getDocument()
         return try? snapshot.getData(as: User.self)
     }
-    
     public func fetchAllUsersData() async throws -> [User] {
         let snapshot = try await FirestoreConstants.usersCollection.getDocuments()
         return snapshot.getData(as: User.self)
     }
-    
     public func createUser(username: String, age: Int, imageUrl: String?) async throws {
         let ref = FirestoreConstants.usersCollection.document()
         let user = User(id: ref.documentID, username: username, age: age, imageUrl: imageUrl)
