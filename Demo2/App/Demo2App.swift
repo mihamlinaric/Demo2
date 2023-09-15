@@ -11,7 +11,7 @@ import Demo2Business
 @main
 struct Demo2App: App {
     
-    init() { FirebaseService._config() }
+    init() { FirebaseService().config() }
     
     var body: some Scene {
         WindowGroup {
