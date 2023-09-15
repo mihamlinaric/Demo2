@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE00FAE42AB432B000A56DD5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AE00FAE32AB432B000A56DD5 /* FirebaseFirestore */; };
 		AE0E88622AB2DBEF00EA7530 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E88612AB2DBEF00EA7530 /* MainTabView.swift */; };
 		AE0E88662AB2DC8900EA7530 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E88652AB2DC8900EA7530 /* HomeView.swift */; };
 		AE0E88682AB2DD1500EA7530 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E88672AB2DD1400EA7530 /* UserView.swift */; };
@@ -72,7 +71,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE0E889A2AB2E62900EA7530 /* Demo2Model.framework in Frameworks */,
-				AE00FAE42AB432B000A56DD5 /* FirebaseFirestore in Frameworks */,
 				AE90E4BA2AB1E14A008B551A /* Demo2Business.framework in Frameworks */,
 				AE0E88D82AB2FD5600EA7530 /* Kingfisher in Frameworks */,
 			);
@@ -253,7 +251,6 @@
 			name = Demo2;
 			packageProductDependencies = (
 				AE0E88D72AB2FD5600EA7530 /* Kingfisher */,
-				AE00FAE32AB432B000A56DD5 /* FirebaseFirestore */,
 			);
 			productName = Demo2;
 			productReference = AE90E45E2AB1DE8A008B551A /* Demo2.app */;
@@ -549,11 +546,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AE00FAE32AB432B000A56DD5 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AE0E89182AB329EC00EA7530 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
 		AE0E88D72AB2FD5600EA7530 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AE0E88D62AB2FD5600EA7530 /* XCRemoteSwiftPackageReference "Kingfisher" */;
