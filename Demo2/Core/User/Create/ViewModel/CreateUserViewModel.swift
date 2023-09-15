@@ -17,14 +17,8 @@ final class CreateUserViewModel: ObservableObject {
     @Published var selectedImage: PhotosPickerItem? {
         didSet { Task { await loadImage() } }
     }
-    @Published var postImage: Image?
-    private var uiImage: UIImage?
-    
-    
-    func createUser() async throws {
-        guard let age = Int(self.age) else { return }
-        try await UserService.createUser(username: self.username, age: age, uiImage: self.uiImage)
-    }
+    @Published var image: Image?
+    var uiImage: UIImage?
     
     @MainActor
     func loadImage() async {
@@ -33,6 +27,6 @@ final class CreateUserViewModel: ObservableObject {
         guard let uiImage = UIImage(data: data) else { return }
         
         self.uiImage = uiImage
-        self.postImage = Image(uiImage: uiImage)
+        self.image = Image(uiImage: uiImage)
     }
 }

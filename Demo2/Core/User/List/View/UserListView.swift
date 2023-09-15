@@ -1,5 +1,5 @@
 //
-//  UserView.swift
+//  UserListView.swift
 //  Demo2
 //
 //  Created by Miha Mlinaric on 14/09/2023.
@@ -8,23 +8,16 @@
 import SwiftUI
 import Demo2Model
 
-struct UserView: View {
-    @StateObject var viewModel = UserViewModel()
+struct UserListView: View {
+    @StateObject var viewModel = UsersViewModel()
     @State private var isSheetShowing: Bool = false
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                ForEach(viewModel.users) { user in
+                ForEach(Array(viewModel.users.values)) { user in
                     NavigationLink(value: user) {
-                        HStack {
-                            Text(user.username)
-                            
-                            Spacer()
-                            
-                            Text("\(user.age)")
-                        }
-                        .padding([.horizontal, .bottom], 6)
+                        UserListRow(viewModel: viewModel, user: user)
                     }
                 }
             }
@@ -45,14 +38,14 @@ struct UserView: View {
             }
         }
         .sheet(isPresented: $isSheetShowing) {
-            CreateUserView()
+            CreateUserView(usersViewModel: viewModel)
                 .presentationDetents([.large])
         }
     }
 }
 
-struct UserView_Previews: PreviewProvider {
+struct UserListView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView()
+        UserListView()
     }
 }

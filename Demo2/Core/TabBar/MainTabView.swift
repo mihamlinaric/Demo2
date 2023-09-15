@@ -9,7 +9,7 @@ import SwiftUI
 
 enum Tab {
     case home
-    case user
+    case userList
 }
 
 struct MainTabView: View {
@@ -21,10 +21,10 @@ struct MainTabView: View {
                     Image(systemName: "house")
                 }.tag(Tab.home)
             
-            UserView()
+            UserListView()
                 .tabItem {
                     Image(systemName: "person")
-                }.tag(Tab.user)
+                }.tag(Tab.userList)
         }
         .accentColor(.black)
     }

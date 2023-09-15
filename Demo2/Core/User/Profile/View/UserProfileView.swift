@@ -14,11 +14,7 @@ struct UserProfileView: View {
     var body: some View {
         VStack {
             if let imageUrl = user.imageUrl {
-                KFImage(URL(string: imageUrl))
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 150, height: 150)
-                    .clipShape(Circle())
+                CircularImage(imageUrl: imageUrl, size: ImageSize.large)
             }
             
             Divider()
