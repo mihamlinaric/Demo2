@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE00FAE42AB432B000A56DD5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AE00FAE32AB432B000A56DD5 /* FirebaseFirestore */; };
 		AE0E88622AB2DBEF00EA7530 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E88612AB2DBEF00EA7530 /* MainTabView.swift */; };
 		AE0E88662AB2DC8900EA7530 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E88652AB2DC8900EA7530 /* HomeView.swift */; };
 		AE0E88682AB2DD1500EA7530 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E88672AB2DD1400EA7530 /* UserView.swift */; };
@@ -19,8 +20,6 @@
 		AE0E88A52AB2EE5C00EA7530 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E88A42AB2EE5C00EA7530 /* UserProfileView.swift */; };
 		AE0E88D82AB2FD5600EA7530 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AE0E88D72AB2FD5600EA7530 /* Kingfisher */; };
 		AE0E89172AB3252600EA7530 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE0E89162AB3252600EA7530 /* GoogleService-Info.plist */; };
-		AE0E891C2AB32BAD00EA7530 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AE0E891B2AB32BAD00EA7530 /* FirebaseAnalytics */; };
-		AE0E891E2AB32CF500EA7530 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AE0E891D2AB32CF500EA7530 /* FirebaseFirestore */; };
 		AE90E4622AB1DE8A008B551A /* Demo2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90E4612AB1DE8A008B551A /* Demo2App.swift */; };
 		AE90E4642AB1DE8A008B551A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90E4632AB1DE8A008B551A /* ContentView.swift */; };
 		AE90E4662AB1DE8C008B551A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE90E4652AB1DE8C008B551A /* Assets.xcassets */; };
@@ -73,9 +72,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE0E889A2AB2E62900EA7530 /* Demo2Model.framework in Frameworks */,
+				AE00FAE42AB432B000A56DD5 /* FirebaseFirestore in Frameworks */,
 				AE90E4BA2AB1E14A008B551A /* Demo2Business.framework in Frameworks */,
-				AE0E891C2AB32BAD00EA7530 /* FirebaseAnalytics in Frameworks */,
-				AE0E891E2AB32CF500EA7530 /* FirebaseFirestore in Frameworks */,
 				AE0E88D82AB2FD5600EA7530 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,8 +253,7 @@
 			name = Demo2;
 			packageProductDependencies = (
 				AE0E88D72AB2FD5600EA7530 /* Kingfisher */,
-				AE0E891B2AB32BAD00EA7530 /* FirebaseAnalytics */,
-				AE0E891D2AB32CF500EA7530 /* FirebaseFirestore */,
+				AE00FAE32AB432B000A56DD5 /* FirebaseFirestore */,
 			);
 			productName = Demo2;
 			productReference = AE90E45E2AB1DE8A008B551A /* Demo2.app */;
@@ -469,7 +466,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihamlinaric.Demo2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -499,7 +496,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "-ObjC";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihamlinaric.Demo2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -551,20 +549,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AE00FAE32AB432B000A56DD5 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE0E89182AB329EC00EA7530 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		AE0E88D72AB2FD5600EA7530 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AE0E88D62AB2FD5600EA7530 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		AE0E891B2AB32BAD00EA7530 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AE0E89182AB329EC00EA7530 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		AE0E891D2AB32CF500EA7530 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AE0E89182AB329EC00EA7530 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
