@@ -6,10 +6,20 @@
 //
 
 import Foundation
+import Combine
+import Demo2Model
+import Demo2Authentication
 
 public class Interface {
-    
+    private static let shared = Interface()
     private init() {}
     
-    // Include services that need state handling
+    
+    public static func auth() -> AuthenticationService {
+        return shared._authentication
+    }
+    
+    
+    // Include services that need state handling ???
+    private let _authentication = AuthenticationService()
 }
