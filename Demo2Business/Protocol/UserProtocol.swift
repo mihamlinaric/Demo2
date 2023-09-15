@@ -12,5 +12,7 @@ import Demo2Model
 protocol UserProtocol {
     static func fetchUser(uid: String) async throws -> User?
     static func fetchAllUsers() async throws -> [User]
-    static func createUser(username: String, age: Int, uiImage: UIImage?) async throws -> Void
+    static func createUser(username: String, age: Int, uiImage: UIImage?) async throws -> User?
+    static func updateUser(uid: String, data: [String: Any]) async throws
+    static func removeUser(uid: String) async throws
 }
