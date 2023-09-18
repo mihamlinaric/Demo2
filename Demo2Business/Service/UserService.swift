@@ -39,9 +39,4 @@ public class UserService: UserProtocol {
     static public func removeUser(uid: String) async throws {
         try await FirestoreUserService().removeUserData(uid)
     }
-    
-    static public func isCurrentUser(uid: String) -> Bool {
-        return uid == Interface.auth().userSessionId
-    }
-    
 }

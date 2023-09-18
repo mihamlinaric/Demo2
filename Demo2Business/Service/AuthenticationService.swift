@@ -28,6 +28,10 @@ public class AuthenticationService: AuthenticationProtocol {
         return _authentication.$currentUser
     }
     
+    public func isCurrentUser(uid: String) -> Bool {
+        return uid == userSessionId
+    }
+    
     @MainActor
     public func loadUserData() async throws {
         _authentication.loadUserSession()

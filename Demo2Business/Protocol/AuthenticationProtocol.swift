@@ -13,6 +13,7 @@ protocol AuthenticationProtocol {
     var currentUser: Demo2Model.User? { get }
     var currentUserPublisher: Published<Demo2Model.User?>.Publisher { get }
     
+    func isCurrentUser(uid: String) -> Bool
     func loadUserData() async throws
     func login(withEmail email: String, password: String) async throws
     func createUser(withEmail email: String, password: String) async throws
