@@ -10,6 +10,6 @@ import Demo2Business
 
 final class UserListRowViewModel: ObservableObject {
     func isCurrentUser(uid: String) -> Bool {
-        return UserService.isCurrentUser(uid: uid)
+        return Interface.auth().isCurrentUser(uid: uid)
     }
 }
