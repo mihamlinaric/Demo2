@@ -12,6 +12,7 @@
 		AE00FB192AB481F400A56DD5 /* Demo2Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE00FB182AB481F400A56DD5 /* Demo2Model.framework */; };
 		AE00FB1A2AB481F400A56DD5 /* Demo2Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE00FB182AB481F400A56DD5 /* Demo2Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE00FB1E2AB4825300A56DD5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AE00FB1D2AB4825300A56DD5 /* FirebaseAuth */; };
+		AE0E589B2AB843900036DC8A /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E589A2AB843900036DC8A /* AuthenticationProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		AE00FB0C2AB4783000A56DD5 /* Demo2Authentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo2Authentication.h; sourceTree = "<group>"; };
 		AE00FB152AB4787200A56DD5 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		AE00FB182AB481F400A56DD5 /* Demo2Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE0E589A2AB843900036DC8A /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationProtocol.swift; path = ../../../../../../AuthenticationProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		AE00FB142AB4785E00A56DD5 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				AE0E589A2AB843900036DC8A /* AuthenticationProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE00FB162AB4787200A56DD5 /* AuthenticationService.swift in Sources */,
+				AE0E589B2AB843900036DC8A /* AuthenticationProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
