@@ -10,6 +10,7 @@ import Combine
 import Demo2Business
 import Demo2Model
 
+@MainActor
 final class ContentViewModel: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()

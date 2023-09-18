@@ -27,9 +27,9 @@ final class UsersViewModel: ObservableObject {
     }
     
     @MainActor
-    func createUser(username: String, age: String, uiImage: UIImage?) async throws {
+    func createUser(uid: String, username: String, age: String, email: String, uiImage: UIImage?) async throws {
         guard let age = Int(age) else { return }
-        guard let user = try await UserService.createUser(username: username, age: age, uiImage: uiImage) else { return }
+        guard let user = try await UserService.createUser(uid: uid, username: username, age: age, email: email, uiImage: uiImage) else { return }
         self.users[user.id] = user
     }
     
@@ -37,15 +37,21 @@ final class UsersViewModel: ObservableObject {
     func removeUser(uid: String) async throws {
         self.users.removeValue(forKey: uid)
         try await UserService.removeUser(uid: uid)
+        try Interface.auth().removeAccount()
     }
     
     @MainActor
     func updateUser(uid: String, data: [String: Any]) async throws {
         guard var user = self.users[uid] else { return }
+        
+        if let username = data["username"] as? String {
+            user.username = username
+        }
         if let age = data["age"] as? Int{
             user.age = age
-            self.users[uid] = user
         }
+        self.users[uid] = user
+        
         try await UserService.updateUser(uid: uid, data: data)
     }
 }

@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import Demo2Business
 
 struct HomeView: View {
     var body: some View {
         VStack {
-            Text("home")
+            Button("Log out") {
+                Task { try Interface.auth().signOut() }
+            }
+            .foregroundColor(Color(.systemBlue))
         }
     }
 }

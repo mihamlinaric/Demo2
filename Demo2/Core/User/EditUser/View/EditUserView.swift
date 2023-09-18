@@ -21,14 +21,31 @@ struct EditUserView: View {
         VStack {
             HStack {
                 if let imageUrl = viewModel.user.imageUrl {
-                    CircularImage(imageUrl: imageUrl, size: ImageSize.medium)
+                    CircularImage(imageUrl: imageUrl, size: ImageSize.large)
                 }
             }
-            Text("Age")
-                .font(.footnote)
-                .fontWeight(.semibold)
-                .padding(.bottom, 12)
-            TextField("Enter your age...", text: $viewModel.age)
+            
+            HStack {
+                Text("username: ")
+                    .font(.footnote)
+                    .foregroundColor(.black)
+                    .padding(.trailing, 4)
+                TextField("Enter your username...", text: $viewModel.username)
+            }
+            .padding(.top, 12)
+            .padding(.horizontal)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            
+            HStack {
+                Text("age: ")
+                    .font(.footnote)
+                    .foregroundColor(.black)
+                    .padding(.trailing, 4)
+                TextField("Enter your age...", text: $viewModel.age)
+            }
+            .padding(.top, 12)
+            .padding(.horizontal)
+            .frame(maxWidth: .infinity, alignment: .leading)
             
             Button {
                 viewModel.loadData()

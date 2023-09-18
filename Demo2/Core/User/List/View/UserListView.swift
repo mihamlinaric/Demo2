@@ -27,21 +27,6 @@ struct UserListView: View {
             .navigationDestination(for: User.self, destination: { user in
                 UserProfileView(user: user)
             })
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        isSheetShowing.toggle()
-                    } label: {
-                        Image(systemName: "plus")
-                    }
-
-                }
-            }
-        }
-        .sheet(isPresented: $isSheetShowing) {
-            CreateUserView()
-                .environmentObject(usersViewModel)
-                .presentationDetents([.large])
         }
     }
 }

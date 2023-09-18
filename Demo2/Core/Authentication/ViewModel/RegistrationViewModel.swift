@@ -1,24 +1,28 @@
 //
-//  CreateUserViewModel.swift
+//  RegistrationViewModel.swift
 //  Demo2
 //
-//  Created by Miha Mlinaric on 14/09/2023.
+//  Created by Miha Mlinaric on 18/09/2023.
 //
 
 import Foundation
-import Demo2Business
 import SwiftUI
 import PhotosUI
+import Demo2Business
 
-final class CreateUserViewModel: ObservableObject {
+final class RegistrationViewModel: ObservableObject {
     @Published var username: String = ""
     @Published var age: String = ""
+    @Published var email: String = ""
+    @Published var password: String = ""
     
     @Published var selectedImage: PhotosPickerItem? {
         didSet { Task { await loadImage() } }
     }
     @Published var image: Image?
     var uiImage: UIImage?
+    
+    let service = Interface.auth()
     
     @MainActor
     func loadImage() async {
@@ -29,4 +33,12 @@ final class CreateUserViewModel: ObservableObject {
         self.uiImage = uiImage
         self.image = Image(uiImage: uiImage)
     }
+    
+    func createUser() async throws {
+        try await service.createUser(withEmail: email, password: password)
+        guard let uid = service.userSession?.uid, let age = Int(age) else { return }
+        guard let user = try await UserService.createUser(uid: uid, username: username, age: age, email: email, uiImage: uiImage) else { return }
+        service.currentUser = user
+    }
+
 }
