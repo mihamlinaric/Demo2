@@ -23,11 +23,11 @@ public class UserService: UserProtocol {
         return try await FirestoreUserService().fetchAllUsersData()
     }
     
-    static public func createUser(username: String, age: Int, uiImage: UIImage?) async throws -> User? {
+    static public func createUser(uid: String, username: String, age: Int, email: String, uiImage: UIImage?) async throws -> User? {
         guard let uiImage = uiImage else { return nil }
         guard let imageUrl = try await ImageUploader.uploadImage(image: uiImage, storagePath: FirebaseStorageConstants.profileImage) else { return nil }
         
-        guard let user = try await FirestoreUserService().createUser(username: username, age: age, imageUrl: imageUrl) else { return nil }
+        guard let user = try await FirestoreUserService().createUser(uid: uid, username: username, age: age, email: email, imageUrl: imageUrl) else { return nil }
         return user
     }
     
