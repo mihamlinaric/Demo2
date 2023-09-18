@@ -11,6 +11,7 @@ import Demo2Firestore
 import Demo2Storage
 import Demo2Model
 import Demo2Utility
+import Demo2Authentication
 
 public class UserService: UserProtocol {
     private init() { }
@@ -37,6 +38,10 @@ public class UserService: UserProtocol {
     
     static public func removeUser(uid: String) async throws {
         try await FirestoreUserService().removeUserData(uid)
+    }
+    
+    static public func isCurrentUser(uid: String) -> Bool {
+        return uid == Interface.auth().userSessionId
     }
     
 }
