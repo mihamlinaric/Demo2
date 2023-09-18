@@ -23,9 +23,9 @@ public struct FirestoreUserService: FirestoreUserProtocols {
         return snapshot.getData(as: User.self)
     }
     
-    public func createUser(username: String, age: Int, imageUrl: String?) async throws -> User? {
-        let ref = FirestoreConstants.usersCollection.document()
-        let user = User(id: ref.documentID, username: username, age: age, imageUrl: imageUrl)
+    public func createUser(uid: String, username: String, age: Int, email: String, imageUrl: String?) async throws -> User? {
+        let ref = FirestoreConstants.usersCollection.document(uid)
+        let user = User(id: uid, username: username, age: age, email: email, imageUrl: imageUrl)
         guard let encodedUser = try? Firestore.Encoder().encode(user) else { return nil }
         try await ref.setData(encodedUser)
         
