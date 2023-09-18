@@ -36,9 +36,9 @@ final class RegistrationViewModel: ObservableObject {
     
     func createUser() async throws {
         try await service.createUser(withEmail: email, password: password)
-        guard let uid = service.userSession?.uid, let age = Int(age) else { return }
-        guard let user = try await UserService.createUser(uid: uid, username: username, age: age, email: email, uiImage: uiImage) else { return }
-        service.currentUser = user
+        guard let uid = service.userSessionId, let age = Int(age) else { return }
+        guard let _ = try await UserService.createUser(uid: uid, username: username, age: age, email: email, uiImage: uiImage) else { return }
+        try await service.loadUserData()
     }
 
 }

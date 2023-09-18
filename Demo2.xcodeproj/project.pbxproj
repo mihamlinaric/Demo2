@@ -16,6 +16,7 @@
 		AE0E588D2AB825C30036DC8A /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E588C2AB825C30036DC8A /* RegistrationView.swift */; };
 		AE0E588F2AB8275B0036DC8A /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E588E2AB8275B0036DC8A /* RegistrationViewModel.swift */; };
 		AE0E58912AB828B30036DC8A /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E58902AB828B30036DC8A /* ButtonModifier.swift */; };
+		AE0E58932AB8399E0036DC8A /* UserListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E58922AB8399E0036DC8A /* UserListRowViewModel.swift */; };
 		AE0E88622AB2DBEF00EA7530 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E88612AB2DBEF00EA7530 /* MainTabView.swift */; };
 		AE0E88662AB2DC8900EA7530 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E88652AB2DC8900EA7530 /* HomeView.swift */; };
 		AE0E88682AB2DD1500EA7530 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E88672AB2DD1400EA7530 /* UserListView.swift */; };
@@ -60,6 +61,8 @@
 		AE0E588C2AB825C30036DC8A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		AE0E588E2AB8275B0036DC8A /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		AE0E58902AB828B30036DC8A /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
+		AE0E58922AB8399E0036DC8A /* UserListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRowViewModel.swift; sourceTree = "<group>"; };
+		AE0E58A62AB86C6D0036DC8A /* Demo2Authentication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Authentication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0E88612AB2DBEF00EA7530 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		AE0E88652AB2DC8900EA7530 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AE0E88672AB2DD1400EA7530 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				AE0E886B2AB2DDA800EA7530 /* UsersViewModel.swift */,
+				AE0E58922AB8399E0036DC8A /* UserListRowViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -286,17 +290,17 @@
 			isa = PBXGroup;
 			children = (
 				AE90E4A72AB1DF13008B551A /* View */,
-				AE90E4A62AB1DF0F008B551A /* VIewModel */,
+				AE90E4A62AB1DF0F008B551A /* ViewModel */,
 			);
 			path = Root;
 			sourceTree = "<group>";
 		};
-		AE90E4A62AB1DF0F008B551A /* VIewModel */ = {
+		AE90E4A62AB1DF0F008B551A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				AE90E4A82AB1DF2B008B551A /* ContentViewModel.swift */,
 			);
-			path = VIewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		AE90E4A72AB1DF13008B551A /* View */ = {
@@ -310,6 +314,7 @@
 		AE90E4B82AB1E14A008B551A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE0E58A62AB86C6D0036DC8A /* Demo2Authentication.framework */,
 				AE0E88D32AB2FB4200EA7530 /* Demo2Storage.framework */,
 				AE0E88992AB2E62900EA7530 /* Demo2Model.framework */,
 				AE90E4B92AB1E14A008B551A /* Demo2Business.framework */,
@@ -328,6 +333,7 @@
 				AE90E45B2AB1DE8A008B551A /* Frameworks */,
 				AE90E45C2AB1DE8A008B551A /* Resources */,
 				AE90E4BC2AB1E14A008B551A /* Embed Frameworks */,
+				AE0E589F2AB85C260036DC8A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -390,6 +396,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AE0E589F2AB85C260036DC8A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(BUILT_PRODUCTS_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE90E45A2AB1DE8A008B551A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -404,6 +435,7 @@
 				AE0E58892AB81C860036DC8A /* LoginViewModel.swift in Sources */,
 				AE90E4622AB1DE8A008B551A /* Demo2App.swift in Sources */,
 				AE00FAF42AB44D1400A56DD5 /* UserListRow.swift in Sources */,
+				AE0E58932AB8399E0036DC8A /* UserListRowViewModel.swift in Sources */,
 				AE0E588B2AB81D3C0036DC8A /* TextFieldModifier.swift in Sources */,
 				AE90E4A92AB1DF2B008B551A /* ContentViewModel.swift in Sources */,
 				AE0E88662AB2DC8900EA7530 /* HomeView.swift in Sources */,
@@ -540,6 +572,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Demo2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

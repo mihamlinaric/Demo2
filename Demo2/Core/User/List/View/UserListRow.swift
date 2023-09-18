@@ -12,6 +12,7 @@ struct UserListRow: View {
     @EnvironmentObject var usersViewModel: UsersViewModel
     let user: User
     
+    @StateObject var viewModel = UserListRowViewModel()
     @State private var editUserIsShowing: Bool = false
     
     var body: some View {
@@ -31,12 +32,14 @@ struct UserListRow: View {
             }
             
             // remove user
-            Button {
-                Task { try await usersViewModel.removeUser(uid: user.id) }
-            } label: {
-                Image(systemName: "trash")
-                    .foregroundColor(.red)
-                    .imageScale(.large)
+            if viewModel.isCurrentUser(uid: user.id) {
+                Button {
+                    Task { try await usersViewModel.removeUser(uid: user.id) }
+                } label: {
+                    Image(systemName: "trash")
+                        .foregroundColor(.red)
+                        .imageScale(.large)
+                }
             }
 
         }

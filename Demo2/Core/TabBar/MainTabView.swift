@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Demo2Model
 
 enum Tab {
     case home
@@ -14,9 +15,11 @@ enum Tab {
 
 struct MainTabView: View {
     @State private var selected: Tab = Tab.home
+    let user: Demo2Model.User
+    
     var body: some View {
         TabView(selection: $selected) {
-            HomeView()
+            HomeView(user: user)
                 .tabItem {
                     Image(systemName: "house")
                 }.tag(Tab.home)
@@ -32,6 +35,6 @@ struct MainTabView: View {
 
 struct MainTabVIew_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView()
+        MainTabView(user: User.MOCK_USERS[0])
     }
 }

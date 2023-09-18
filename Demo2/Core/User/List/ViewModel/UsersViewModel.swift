@@ -35,6 +35,8 @@ final class UsersViewModel: ObservableObject {
     
     @MainActor
     func removeUser(uid: String) async throws {
+        guard UserService.isCurrentUser(uid: uid) else { return }
+        
         self.users.removeValue(forKey: uid)
         try await UserService.removeUser(uid: uid)
         try Interface.auth().removeAccount()

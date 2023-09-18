@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Demo2Model
 
 struct ContentView: View {
     @StateObject var viewModel = ContentViewModel()
@@ -14,8 +15,8 @@ struct ContentView: View {
         Group {
             if viewModel.currentUser == nil {
                 LoginView()
-            } else {
-                MainTabView()
+            } else if let user = viewModel.currentUser {
+                MainTabView(user: user)
             }
         }
     }

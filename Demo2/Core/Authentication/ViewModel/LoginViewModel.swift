@@ -16,7 +16,6 @@ final class LoginViewModel: ObservableObject {
     
     func login() async throws {
         try await service.login(withEmail: email, password: password)
-        guard let uid = service.userSession?.uid else { return }
-        service.currentUser = try await UserService.fetchUser(uid: uid)
+        try await service.loadUserData()
     }
 }

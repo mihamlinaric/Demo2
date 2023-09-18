@@ -7,10 +7,15 @@
 
 import SwiftUI
 import Demo2Business
+import Demo2Model
 
 struct HomeView: View {
+    let user: User
+    
     var body: some View {
         VStack {
+            Text("Hello, \(user.username)")
+                .padding(.bottom, 12)
             Button("Log out") {
                 Task { try Interface.auth().signOut() }
             }
@@ -21,6 +26,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(user: User.MOCK_USERS[0])
     }
 }
