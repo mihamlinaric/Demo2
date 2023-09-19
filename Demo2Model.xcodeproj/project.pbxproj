@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		AE0E88832AB2E53E00EA7530 /* Demo2Model.h in Headers */ = {isa = PBXBuildFile; fileRef = AE0E88822AB2E53E00EA7530 /* Demo2Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE0E888C2AB2E55E00EA7530 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E888B2AB2E55E00EA7530 /* User.swift */; };
+		AEEC32B42AB9726000B3246A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC32B32AB9726000B3246A /* Quote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AE0E887F2AB2E53E00EA7530 /* Demo2Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Demo2Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0E88822AB2E53E00EA7530 /* Demo2Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo2Model.h; sourceTree = "<group>"; };
 		AE0E888B2AB2E55E00EA7530 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AEEC32B32AB9726000B3246A /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				AE0E888B2AB2E55E00EA7530 /* User.swift */,
+				AEEC32B32AB9726000B3246A /* Quote.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEC32B42AB9726000B3246A /* Quote.swift in Sources */,
 				AE0E888C2AB2E55E00EA7530 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = G33XFLC26J;
+				DEVELOPMENT_TEAM = WX8Z7FUV3Y;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -320,7 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = G33XFLC26J;
+				DEVELOPMENT_TEAM = WX8Z7FUV3Y;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
