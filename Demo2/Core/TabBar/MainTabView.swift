@@ -11,6 +11,7 @@ import Demo2Model
 enum Tab {
     case home
     case userList
+    case qouteList
 }
 
 struct MainTabView: View {
@@ -28,6 +29,11 @@ struct MainTabView: View {
                 .tabItem {
                     Image(systemName: "person")
                 }.tag(Tab.userList)
+            
+            QuoteView()
+                .tabItem {
+                    Image(systemName: "q.square.fill")
+                }.tag(Tab.qouteList)
         }
         .accentColor(.black)
     }

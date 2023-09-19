@@ -34,6 +34,11 @@
 		AE90E4A92AB1DF2B008B551A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90E4A82AB1DF2B008B551A /* ContentViewModel.swift */; };
 		AE90E4BA2AB1E14A008B551A /* Demo2Business.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE90E4B92AB1E14A008B551A /* Demo2Business.framework */; };
 		AE90E4BB2AB1E14A008B551A /* Demo2Business.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE90E4B92AB1E14A008B551A /* Demo2Business.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEEC32B02AB9714B00B3246A /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC32AF2AB9714B00B3246A /* QuoteView.swift */; };
+		AEEC32B22AB9715800B3246A /* QouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC32B12AB9715800B3246A /* QouteViewModel.swift */; };
+		AEEC32B62AB9743C00B3246A /* QuoteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC32B52AB9743C00B3246A /* QuoteRow.swift */; };
+		AEEC32BA2AB978C500B3246A /* CreateQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC32B92AB978C500B3246A /* CreateQuoteView.swift */; };
+		AEEC32BC2AB9798100B3246A /* CreateQuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC32BB2AB9798100B3246A /* CreateQuoteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,6 +85,15 @@
 		AE90E4A82AB1DF2B008B551A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		AE90E4B72AB1E142008B551A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AE90E4B92AB1E14A008B551A /* Demo2Business.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Business.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEC32AF2AB9714B00B3246A /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		AEEC32B12AB9715800B3246A /* QouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QouteViewModel.swift; sourceTree = "<group>"; };
+		AEEC32B52AB9743C00B3246A /* QuoteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRow.swift; sourceTree = "<group>"; };
+		AEEC32B92AB978C500B3246A /* CreateQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuoteView.swift; sourceTree = "<group>"; };
+		AEEC32BB2AB9798100B3246A /* CreateQuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuoteViewModel.swift; sourceTree = "<group>"; };
+		AEEC32C82AB9C32F00B3246A /* Demo2Authentication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Authentication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEC32C92AB9C32F00B3246A /* Demo2Firestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Firestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEC32CA2AB9C32F00B3246A /* Demo2Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEC32CB2AB9C32F00B3246A /* Demo2Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +296,7 @@
 				AE0E88642AB2DC6800EA7530 /* User */,
 				AE90E4A52AB1DEFE008B551A /* Root */,
 				AE0E885F2AB2DBDA00EA7530 /* TabBar */,
+				AEEC32AC2AB9712700B3246A /* Quote */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -290,17 +305,17 @@
 			isa = PBXGroup;
 			children = (
 				AE90E4A72AB1DF13008B551A /* View */,
-				AE90E4A62AB1DF0F008B551A /* ViewModel */,
+				AE90E4A62AB1DF0F008B551A /* VIewModel */,
 			);
 			path = Root;
 			sourceTree = "<group>";
 		};
-		AE90E4A62AB1DF0F008B551A /* ViewModel */ = {
+		AE90E4A62AB1DF0F008B551A /* VIewModel */ = {
 			isa = PBXGroup;
 			children = (
 				AE90E4A82AB1DF2B008B551A /* ContentViewModel.swift */,
 			);
-			path = ViewModel;
+			path = VIewModel;
 			sourceTree = "<group>";
 		};
 		AE90E4A72AB1DF13008B551A /* View */ = {
@@ -314,12 +329,44 @@
 		AE90E4B82AB1E14A008B551A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEEC32C82AB9C32F00B3246A /* Demo2Authentication.framework */,
+				AEEC32C92AB9C32F00B3246A /* Demo2Firestore.framework */,
+				AEEC32CA2AB9C32F00B3246A /* Demo2Storage.framework */,
+				AEEC32CB2AB9C32F00B3246A /* Demo2Utility.framework */,
 				AE0E58A62AB86C6D0036DC8A /* Demo2Authentication.framework */,
 				AE0E88D32AB2FB4200EA7530 /* Demo2Storage.framework */,
 				AE0E88992AB2E62900EA7530 /* Demo2Model.framework */,
 				AE90E4B92AB1E14A008B551A /* Demo2Business.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEEC32AC2AB9712700B3246A /* Quote */ = {
+			isa = PBXGroup;
+			children = (
+				AEEC32AE2AB9713E00B3246A /* View */,
+				AEEC32AD2AB9713300B3246A /* ViewModel */,
+			);
+			path = Quote;
+			sourceTree = "<group>";
+		};
+		AEEC32AD2AB9713300B3246A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AEEC32B12AB9715800B3246A /* QouteViewModel.swift */,
+				AEEC32BB2AB9798100B3246A /* CreateQuoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AEEC32AE2AB9713E00B3246A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AEEC32AF2AB9714B00B3246A /* QuoteView.swift */,
+				AEEC32B52AB9743C00B3246A /* QuoteRow.swift */,
+				AEEC32B92AB978C500B3246A /* CreateQuoteView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,7 +475,10 @@
 			files = (
 				AE00FAFB2AB454B800A56DD5 /* EditUserView.swift in Sources */,
 				AE90E4642AB1DE8A008B551A /* ContentView.swift in Sources */,
+				AEEC32B22AB9715800B3246A /* QouteViewModel.swift in Sources */,
+				AEEC32BC2AB9798100B3246A /* CreateQuoteViewModel.swift in Sources */,
 				AE0E88682AB2DD1500EA7530 /* UserListView.swift in Sources */,
+				AEEC32BA2AB978C500B3246A /* CreateQuoteView.swift in Sources */,
 				AE0E588F2AB8275B0036DC8A /* RegistrationViewModel.swift in Sources */,
 				AE0E588D2AB825C30036DC8A /* RegistrationView.swift in Sources */,
 				AE0E58872AB81C610036DC8A /* LoginView.swift in Sources */,
@@ -437,12 +487,14 @@
 				AE00FAF42AB44D1400A56DD5 /* UserListRow.swift in Sources */,
 				AE0E58932AB8399E0036DC8A /* UserListRowViewModel.swift in Sources */,
 				AE0E588B2AB81D3C0036DC8A /* TextFieldModifier.swift in Sources */,
+				AEEC32B02AB9714B00B3246A /* QuoteView.swift in Sources */,
 				AE90E4A92AB1DF2B008B551A /* ContentViewModel.swift in Sources */,
 				AE0E88662AB2DC8900EA7530 /* HomeView.swift in Sources */,
 				AE0E886C2AB2DDA800EA7530 /* UsersViewModel.swift in Sources */,
 				AE0E58912AB828B30036DC8A /* ButtonModifier.swift in Sources */,
 				AE00FAFE2AB455FC00A56DD5 /* EditUserViewModel.swift in Sources */,
 				AE0E88A52AB2EE5C00EA7530 /* UserProfileView.swift in Sources */,
+				AEEC32B62AB9743C00B3246A /* QuoteRow.swift in Sources */,
 				AE0E886F2AB2DEB000EA7530 /* CircularImage.swift in Sources */,
 				AE0E88622AB2DBEF00EA7530 /* MainTabView.swift in Sources */,
 			);
@@ -574,9 +626,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Demo2/Preview Content\"";
+				DEVELOPMENT_TEAM = WX8Z7FUV3Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo2/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Demo2;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -604,9 +658,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Demo2/Preview Content\"";
+				DEVELOPMENT_TEAM = WX8Z7FUV3Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo2/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Demo2;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
