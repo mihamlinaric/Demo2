@@ -25,6 +25,8 @@
 		AE90E4B42AB1DFDB008B551A /* Demo2Firestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE90E4B32AB1DFDB008B551A /* Demo2Firestore.framework */; };
 		AE90E4B52AB1DFDB008B551A /* Demo2Firestore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE90E4B32AB1DFDB008B551A /* Demo2Firestore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE90E4D92AB1E6A3008B551A /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90E4D82AB1E6A3008B551A /* UserProtocol.swift */; };
+		AEEC32BE2AB97A4F00B3246A /* QouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC32BD2AB97A4F00B3246A /* QouteService.swift */; };
+		AEEC32C02AB97A7A00B3246A /* QuoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC32BF2AB97A7A00B3246A /* QuoteProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +62,8 @@
 		AE90E4AC2AB1DF5E008B551A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		AE90E4B32AB1DFDB008B551A /* Demo2Firestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Demo2Firestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE90E4D82AB1E6A3008B551A /* UserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
+		AEEC32BD2AB97A4F00B3246A /* QouteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QouteService.swift; sourceTree = "<group>"; };
+		AEEC32BF2AB97A7A00B3246A /* QuoteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 				AE90E4AC2AB1DF5E008B551A /* UserService.swift */,
 				AE0E89212AB330FF00EA7530 /* FirebaseService.swift */,
 				AE0E58A22AB860970036DC8A /* AuthenticationService.swift */,
+				AEEC32BD2AB97A4F00B3246A /* QouteService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			children = (
 				AE90E4D82AB1E6A3008B551A /* UserProtocol.swift */,
 				AE0E58A42AB868F50036DC8A /* AuthenticationProtocol.swift */,
+				AEEC32BF2AB97A7A00B3246A /* QuoteProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -227,10 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE90E4D92AB1E6A3008B551A /* UserProtocol.swift in Sources */,
+				AEEC32BE2AB97A4F00B3246A /* QouteService.swift in Sources */,
 				AE0E58A52AB868F50036DC8A /* AuthenticationProtocol.swift in Sources */,
 				AE90E4AD2AB1DF5E008B551A /* UserService.swift in Sources */,
 				AE0E89222AB330FF00EA7530 /* FirebaseService.swift in Sources */,
 				AE00FAE82AB444C500A56DD5 /* Interface.swift in Sources */,
+				AEEC32C02AB97A7A00B3246A /* QuoteProtocol.swift in Sources */,
 				AE0E58A32AB860970036DC8A /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,9 +370,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WX8Z7FUV3Y;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -394,9 +404,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WX8Z7FUV3Y;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
