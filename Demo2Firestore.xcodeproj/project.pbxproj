@@ -16,6 +16,8 @@
 		AE90E4B12AB1DF95008B551A /* FirestoreUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90E4B02AB1DF95008B551A /* FirestoreUserService.swift */; };
 		AE90E4CA2AB1E42F008B551A /* FirestoreUserProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90E4C92AB1E42F008B551A /* FirestoreUserProtocols.swift */; };
 		AE90E4CD2AB1E4EE008B551A /* FirestoreConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90E4CC2AB1E4EE008B551A /* FirestoreConstants.swift */; };
+		AEEC32C22AB97B7D00B3246A /* FirestoreQuoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC32C12AB97B7D00B3246A /* FirestoreQuoteProtocol.swift */; };
+		AEEC32C42AB97BB700B3246A /* FirestoreQuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC32C32AB97BB700B3246A /* FirestoreQuoteService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,8 @@
 		AE90E4B02AB1DF95008B551A /* FirestoreUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserService.swift; sourceTree = "<group>"; };
 		AE90E4C92AB1E42F008B551A /* FirestoreUserProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserProtocols.swift; sourceTree = "<group>"; };
 		AE90E4CC2AB1E4EE008B551A /* FirestoreConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreConstants.swift; sourceTree = "<group>"; };
+		AEEC32C12AB97B7D00B3246A /* FirestoreQuoteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreQuoteProtocol.swift; sourceTree = "<group>"; };
+		AEEC32C32AB97BB700B3246A /* FirestoreQuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreQuoteService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				AE90E4B02AB1DF95008B551A /* FirestoreUserService.swift */,
+				AEEC32C32AB97BB700B3246A /* FirestoreQuoteService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AE90E4C92AB1E42F008B551A /* FirestoreUserProtocols.swift */,
+				AEEC32C12AB97B7D00B3246A /* FirestoreQuoteProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -217,6 +223,8 @@
 				AE90E4CD2AB1E4EE008B551A /* FirestoreConstants.swift in Sources */,
 				AE90E4CA2AB1E42F008B551A /* FirestoreUserProtocols.swift in Sources */,
 				AE90E4B12AB1DF95008B551A /* FirestoreUserService.swift in Sources */,
+				AEEC32C42AB97BB700B3246A /* FirestoreQuoteService.swift in Sources */,
+				AEEC32C22AB97B7D00B3246A /* FirestoreQuoteProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +355,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WX8Z7FUV3Y;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -379,9 +389,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WX8Z7FUV3Y;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
