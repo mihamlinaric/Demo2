@@ -12,7 +12,6 @@
 		AE00FB242AB4838500A56DD5 /* Demo2Authentication.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE00FB222AB4838500A56DD5 /* Demo2Authentication.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE0E58A32AB860970036DC8A /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E58A22AB860970036DC8A /* AuthenticationService.swift */; };
 		AE0E58A52AB868F50036DC8A /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E58A42AB868F50036DC8A /* AuthenticationProtocol.swift */; };
-		AE0E58AE2AB875090036DC8A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AE0E58AD2AB875090036DC8A /* FirebaseAnalytics */; };
 		AE0E88972AB2E61C00EA7530 /* Demo2Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88962AB2E61C00EA7530 /* Demo2Model.framework */; };
 		AE0E88982AB2E61D00EA7530 /* Demo2Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88962AB2E61C00EA7530 /* Demo2Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE0E88DA2AB3012E00EA7530 /* Demo2Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E88D92AB3012E00EA7530 /* Demo2Storage.framework */; };
@@ -71,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE0E58AE2AB875090036DC8A /* FirebaseAnalytics in Frameworks */,
 				AE90E4B42AB1DFDB008B551A /* Demo2Firestore.framework in Frameworks */,
 				AE0E88972AB2E61C00EA7530 /* Demo2Model.framework in Frameworks */,
 				AE00FB232AB4838500A56DD5 /* Demo2Authentication.framework in Frameworks */,
@@ -175,7 +173,6 @@
 			);
 			name = Demo2Business;
 			packageProductDependencies = (
-				AE0E58AD2AB875090036DC8A /* FirebaseAnalytics */,
 			);
 			productName = Demo2Business;
 			productReference = AE90E4792AB1DEA9008B551A /* Demo2Business.framework */;
@@ -466,14 +463,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AE0E58AD2AB875090036DC8A /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AE90E4D12AB1E5F6008B551A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE90E4702AB1DEA9008B551A /* Project object */;
 }
