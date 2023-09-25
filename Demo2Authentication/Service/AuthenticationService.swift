@@ -4,13 +4,16 @@
 //
 //  Created by Miha Mlinaric on 15/09/2023.
 //
-
+import Firebase
 import Foundation
 import FirebaseAuth
 import Demo2Model
 
 public class AuthenticationService: AuthenticationProtocol {
-    public init() { }
+    
+    public init() {
+        loadUserSession()
+    }
     
     /// instance that tells us if user is logged in or not
     @Published public var userSession: FirebaseAuth.User?
@@ -18,7 +21,6 @@ public class AuthenticationService: AuthenticationProtocol {
     @Published public var currentUser: Demo2Model.User?
     
     
-    @MainActor
     public func loadUserSession() {
         self.userSession = Auth.auth().currentUser
     }
