@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-import Demo2Business
 import FirebaseCore
 
-class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
+public class AppDelegate: NSObject, UIApplicationDelegate {
+    public func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
 
@@ -21,7 +20,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct Demo2App: App {
     
-//    init() { FirebaseService().configure() }
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {

@@ -30,22 +30,28 @@ struct EditUserView: View {
                     .font(.footnote)
                     .foregroundColor(.black)
                     .padding(.trailing, 4)
+                    .frame(width: UIScreen.main.bounds.width / 5, alignment: .leading)
+                
                 TextField("Enter your username...", text: $viewModel.username)
+                
+                Spacer()
             }
             .padding(.top, 12)
             .padding(.horizontal)
-            .frame(maxWidth: .infinity, alignment: .leading)
             
             HStack {
                 Text("age: ")
                     .font(.footnote)
                     .foregroundColor(.black)
                     .padding(.trailing, 4)
+                    .frame(width: UIScreen.main.bounds.width / 5, alignment: .leading)
+                
                 TextField("Enter your age...", text: $viewModel.age)
+                
+                Spacer()
             }
             .padding(.top, 12)
             .padding(.horizontal)
-            .frame(maxWidth: .infinity, alignment: .leading)
             
             Button {
                 viewModel.loadData()
