@@ -4,14 +4,15 @@
 //
 //  Created by Miha Mlinaric on 13/09/2023.
 //
-
+import Firebase
 import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 import Demo2Model
 
 public struct FirestoreUserService: FirestoreUserProtocols {
-    public init() { }
+    public init() {
+    }
     
     public func fetchUserData(_ uid: String) async throws -> User? {
         let snapshot = try await FirestoreConstants.usersCollection.document(uid).getDocument()

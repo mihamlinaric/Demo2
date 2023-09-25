@@ -11,7 +11,8 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 public struct FirestoreQuoteService: FirestoreQuoteProtocol {
-    public init() { }
+    public init() {
+    }
     
     public func fetchQuote(id: String) async throws -> Quote? {
         let snapshot = try await FirestoreConstants.quotesCollection.document(id).getDocument()
