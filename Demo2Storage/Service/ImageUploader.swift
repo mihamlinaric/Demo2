@@ -4,7 +4,7 @@
 //
 //  Created by Miha Mlinaric on 14/09/2023.
 //
-
+import Firebase
 import Foundation
 import UIKit
 import FirebaseStorage
