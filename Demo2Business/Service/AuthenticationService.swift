@@ -34,8 +34,6 @@ public class AuthenticationService: AuthenticationProtocol {
     
     @MainActor
     public func loadUserData() async throws {
-        _authentication.loadUserSession()
-        
         guard let uid = self.userSessionId else { return }
         guard let user = try await UserService.fetchUser(uid: uid) else { return }
         return _authentication.setCurrentUser(user: user)

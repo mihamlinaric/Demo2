@@ -6,8 +6,7 @@
 //
 
 import Foundation
-import Demo2Model
-import Demo2Authentication
+
 
 public class Interface {
     private static let shared = Interface()
@@ -17,7 +16,5 @@ public class Interface {
         return shared._authentication
     }
     
-    
-    // Include services that need state handling ???
     private let _authentication = AuthenticationService()
 }
